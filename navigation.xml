@@ -1,0 +1,16 @@
+Navigation for mainActivity (HomeScreen of app ) by tapping the Up button in the app bar.
+
+
+STEPS :
+
+1. Declare which activity is the logical parent in the AndroidManifest.xml file.
+2. So open the file at app > manifests > AndroidManifest.xml, locate the <activity> tag for Non_parentActivity and replace it with the following:
+
+
+<activity android:name=".Non_parentActivity"
+          android:parentActivityName=".MainActivity">
+    <!-- The meta-data tag is required if you support API level 15 and lower -->
+    <meta-data
+        android:name="android.support.PARENT_ACTIVITY"
+        android:value=".MainActivity" />
+</activity>
